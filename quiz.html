@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zanibal quiz</title>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="JS/quiz.js"></script>
+    <style type="text/css">
+      .clockStyle {
+        background-color: #000;
+        border: #999 2px inset;
+        padding: 6px;
+        color: #0ff;
+        font-family: "Arial Black", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        display: inline;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <h1>  <b> ZANIBAL INTERVIEW QUESTIONS 2020 </b> </h1> 
+    <img  src="image/logo.png" alt="my image" width="380" height="80"  >
+    <div id="clockDisplay" class="clockStyle"></div>
+  
+    
+    <script>
+      m =  35;
+      s = 60;
+
+      function renderTime() {
+        s--;
+        if (s == 0) {
+          m--;
+          s = 60;
+        }
+        if (m < 0) {
+          clearTimeout(myClock);
+           alert ("TIME COMPLETED!!! ");
+           
+        }
+
+        //myClock.innerHTML = m + ":" + s;
+        var myclock = document.getElementById("clockDisplay");
+        myclock.innerHTML = m + ":" + s;
+
+        var myClock = setTimeout("renderTime()", 1000);
+      }
+
+      renderTime();
+    </script>
+    <form id="quiz" name="quiz">
+      <p>
+        1. If Lynn can type a page in p minutes, what piece of the page can she
+        do in 5 minutes?
+      </p>
+      <input type="radio" name="question1" id="mc" value="5/p" />5/p <br />
+      <input type="radio" name="question1" id="mc" value="4p – 5" />4p – 5
+      <br />
+      <input type="radio" name="question1" id="mc" value="p + 5" />p + 5 <br />
+      <input type="radio" name="question1" id="mc" value="p/5 " />p/5 <br />
+      <input type="radio" name="question1" id="mc" value="1- p + 5" />1- p +
+      5<br />
+
+      <p>
+        2. If Sally can paint a house in 4 hours, and John can paint the same
+        house in 6 hour, how long will it take for both of them to paint the
+        house together?
+      </p>
+      <input
+        type="radio"
+        name="question2"
+        id="mc"
+        value="2 hours and 24 minutes"
+      />2 hours and 24 minutes<br />
+      <input
+        type="radio"
+        name="question2"
+        id="mc"
+        value=" hours and 12 minutes"
+      />3 hours and 12 minutes<br />
+      <input
+        type="radio"
+        name="question2"
+        id="mc"
+        value="3 hours and 44 minutes"
+      />3 hours and 44 minutes<br />
+      <input
+        type="radio"
+        name="question2"
+        id="mc"
+        value="4 hours and 10 minutes"
+      />4 hours and 10 minutes<br />
+      <input
+        type="radio"
+        name="question2"
+        id="mc"
+        value="4 hours and 33 minutes"
+      />4 hours and 33 minutes<br />
+
+      <p>
+        3.Employees of a discount appliance store receive an additional 20% off
+        of the lowest price on an item. If an employee purchases a dishwasher
+        during a 15% off sale, how much will he pay if the dishwasher originally
+        cost $450?
+      </p>
+      <input type="radio" name="question3" id="mc" value="$333.89" />$306.00
+      <br />
+      <input type="radio" name="question3" id="mc" value="$280.90" />$280.90
+      <br />
+      <input type="radio" name="question3" id="mc" value="$287.00" />$287.00
+      <br />
+      <input type="radio" name="question3" id="mc" value=" $292.50" />$292.50
+      <br />
+
+      <p>
+        4.The sales price of a car is $12,590, which is 20% off the original
+        price. What is the original price?
+      </p>
+      <input
+        type="radio"
+        name="question4"
+        id="mc"
+        value="$14,310.40"
+      />e$14,310.40 <br />
+      <input
+        type="radio"
+        name="qustion4"
+        id="mc"
+        value="$15,737.50"
+      />$15,737.50 <br />
+      <input
+        type="radio"
+        name="qustion4"
+        id="mc"
+        value="$14,990.90"
+      />$14,990.90
+      <br />
+      <input
+        type="radio"
+        name="question4"
+        id="mc"
+        value="$15,290.70"
+      />$15,290.70 </br>
+
+      <input
+        type="radio"
+        name="qustion4"
+        id="mc"
+        value="$16,935.80"
+      />$16,935.80<br />
+      <br />
+
+      <p>5. Solve the following equation for A : 2A/3 = 8 + 4A</p>
+      <input type="radio" name="question5" id="mc" value="-2.4" />-2.4 <br />
+      <input type="radio" name="question5" id="mc" value="2.4" />2.4 <br />
+      <input type="radio" name="question5" id="mc" value="1.3h" />1.3 <br />
+      <input type="radio" name="question5" id="mc" value="-1.3" />-1.3 <br />
+      <input type="radio" name="question5" id="mc" value="0" />0 <br />
+
+      <p>
+        6. If Leah is 6 years older than Sue, and John is 5 years older than
+        Leah, and the total of their ages is 41. Then how old is Sue?
+      </p>
+      <input type="radio" name="question6" id="mc" value="8" />8<br />
+      <input type="radio" name="question6" id="mc" value="10" />10 <br />
+      <input type="radio" name="question6" id="mc" value="14" />14 <br />
+      <input type="radio" name="question6" id="mc" value="19" />19 <br />
+      <input type="radio" name="question6" id="mc" value="21" />21 <br />
+
+      <p>
+        7. Alfred wants to invest $4,000 at 6% simple interest rate for 5 years.
+        How much interest will he receive?
+      </p>
+
+      <input type="radio" name="question7" id="mc" value="$240"/>$240<br />
+      <input type="radio" name="question7" id="mc" value="$480"/>$480 <br />
+      <input type="radio" name="question7" id="mc" value="$720"/>$720 <br />
+      <input type="radio" name="question7" id="mc" value="$960" />$960 <br />
+      <input type="radio" name="question7" id="mc" value="$1,200" />$1,200 <br />
+
+      <p>
+        8. Jim is able to sell a hand-carved statue for $670 which was a 35%
+        profit over his cost. How much did the statue originally cost him?
+      </p>
+      <input type="radio" name="question8" id="mc" value="$496.30"/>$496.30 <br />
+      <input type="radio" name="question8" id="mc" value="$512.40" />$512.40 <br />
+      <input type="radio" name="question8" id="mc" value="$555.40" />$555.40 <br />
+      <input type="radio" name="question8" id="mc" value="$574.90" />$574.90<br />
+     <input type="radio" name="question8" id="mc" value="$588.20" />$588.20<br />
+
+      <p>
+        9. The city council has decided to add a 0.3% tax on motel and hotel
+        rooms. If a traveler spends the night in a motel room that costs $55
+        before taxes, how much will the city receive in taxes from him?
+      </p>
+      <input type="radio" name="question9" id="mc" value="10 cents" />10 cents <br />
+      <input type="radio" name="question9" id="mc" value="11 cents" />11 cents <br />
+      <input type="radio" name="question9" id="mc" value="15 cents" />15 cents <br />
+      <input type="radio" name="question9" id="mc" value="17 cents" />17cents <br />
+      <input type="radio" name="question9" id="mc" value="21 cents" />21cents <br />
+
+      <p>
+        10. A student receives his grade report from a local community college,
+        but the GPA is smudged. He took the following classes: a 2 hour credit
+        art, a 3 hour credit history, a 4 hour credit science course, a 3 hour
+        credit mathematics course, and a 1 hour science lab. He received a “B”
+        in the art class, an “A” in the history class, a “C” in the science
+        class, a “B” in the mathematics class, and an “A” in the science lab.
+        What was his GPA if the letter grades are based on a 4 point scale?
+        (A=4, B=3, C=2, D=1, F=0)
+      </p>
+      <input type="radio" name="question10" id="mc" value="2.7" />2.7 <br />
+      <input type="radio" name="question10" id="mc" value="2.8" />2.8 <br />
+      <input type="radio" name="question10" id="mc" value="3.0" />3.0 <br />
+      <input type="radio" name="question10" id="mc" value="3.1" />3.1 <br />
+      <input type="radio" name="question10" id="mc" value="3.2" />3.2 <br />
+
+      <p>
+        11. Simon arrived at work at 8:15 A.M. and left work at 10: 30 P.M. If
+        Simon gets paid by the hour at a rate of $10 and time and ½ for any
+        hours worked over 8 in a day. How much did Simon get paid?
+      </p>
+
+        <input type="radio" name="question11" id="mc" value="$120.25" />$120.25<br />
+        <input type="radio" name="question11" id="mc" value="$160.75" />$160.75 <br />
+        <input type="radio" name="question11" id="mc" value="$173.75" />$173.75 <br />
+        <input type="radio" name="question11" id="mc" value="$180.00" />$180.00 <br />
+        <input type="radio" name="question11" id="mc" value="$182.50" />$182.50 <br />
+      <p>
+        12. Grace has 16 jellybeans in her pocket. She has 8 red ones, 4 green
+        ones, and 4 blue ones. What is the minimum number of jellybeans she must
+        take out of her pocket to ensure that she has one of each color?
+      </p>
+      <input type="radio" name="question12" id="mc" value="4" />4<br />
+      <input type="radio" name="question12" id="mc" value="8" />8 <br />
+      <input type="radio" name="question12" id="mc" value="12" />12 <br />
+      <input type="radio" name="question12" id="mc" value="13" />13 <br />
+      <input type="radio" name="question12" id="mc" value="16" />16 <br />
+
+      <p>13. If r = 5 z then 15 z = 3 y, then r =</p>
+      <input type="radio" name="question13" id="mc" value="y" />y <br />
+      <input type="radio" name="question13" id="mc" value="2y" />2y <br />
+      <input type="radio" name="question13" id="mc" value="4y" />4y <br />
+      <input type="radio" name="question13" id="mc" value="10y" />10y<br />
+      <input type="radio" name="question13" id="mc" value="15y" />15y <br />
+
+      <p>
+        14. If 300 jellybeans cost you x dollars. How many jellybeans can you
+        purchase for 50 cents at the same rate?
+      </p>
+        <input type="radio" name="question14" id="mc" value="150/x" />150/x <br/>
+        <input type="radio" name="question14" id="mc" value="150x" />150x<br/>
+        <input type="radio" name="question14" id="mc" value="6x" />6x <br/>
+        <input type="radio" name="question14" id="mc" value="1500/x" />1500/x <br/>
+        <input type="radio" name="question14" id="mc" value="600x" />600x<br />
+      <p>
+        15. Lee worked 22 hours this week and made $132. If she works 15 hours
+        next week at the same pay rate, how much will she make?
+      </p>
+      <input type="radio" name="question15" id="mc" value="$57" />$57<br/>
+      <input type="radio" name="question15" id="mc" value="$90" />$90 <br/>
+      <input type="radio" name="question15" id="mc" value="$104" />$104<br/>
+      <input type="radio" name="question15" id="mc" value="$112" />$112<br/>
+      <input type="radio" name="question15" id="mc" value="600x" />600x<br/>
+
+      <p>16. If 8x + 5x + 2x + 4x = 114, the 5x + 3 =</p>
+      <input type="radio" name="question16" id="mc" value="12" />12<br />
+      <input type="radio" name="question16" id="mc" value="25" />25<br />
+      <input type="radio" name="question16" id="mc" value="33" />33<br />
+      <input type="radio" name="question16" id="mc" value="47" />47<br />
+      <input type="radio" name="question16" id="mc" value="86" />86<br />
+      <p>
+        17. You need to purchase a textbook for nursing school. The book cost
+        $80.00, and the sales tax where you are purchasing the book is 8.25%.
+        You have $100. How much change will you receive back?
+      </p>
+      <input type="radio" name="question17" id="mc" value="$5.20" />$5.20<br />
+      <input type="radio" name="question17" id="mc" value="$7.35" />$7.35 <br />
+      <input type="radio" name="question17" id="mc" value="$13.40" />$13.40<br />
+      <input type="radio" name="question17" id="mc" value="$19.95" />$19.95 <br />
+      <input type="radio" name="question17" id="mc" value="$21.25" />$21.25 <br />
+
+      <p>
+        18. You purchase a car making a down payment of $3,000 and 6 monthly
+        payments of $225. How much have you paid so far for the car?
+      </p>
+      <input type="radio" name="question18" id="mc" value="$3225" />$3225<br />
+      <input type="radio" name="question18" id="mc" value="$4350" />$4350<br />
+      <input type="radio" name="question18" id="mc" value="$5375" />$5375<br />
+      <input type="radio" name="question18" id="mc" value="$6550" />$6550<br />
+      <input type="radio" name="question18" id="mc" value="$6398" />$6398<br />
+
+      <p>
+        19. Your supervisor instructs you to purchase 240 pens and 6 staplers
+        for the nurse’s station. Pens are purchased in sets of 6 for $2.35 per
+        pack. Staplers are sold in sets of 2 for 12.95. How much will purchasing
+        these products cost?
+      </p>
+      <input type="radio" name="question19" id="mc" value="$132.85" />$132.85 <br />
+      <input type="radio" name="question19" id="mc" value="$145.75" />$145.75 <br />
+      <input type="radio" name="question19" id="mc" value="$162.90" />$162.90 <br />
+      <input type="radio" name="question19" id="mc" value="$225.25" />$225.25 <br />
+      <input type="radio" name="question19" id="mc" value="$226.75" />$226.75 <br />
+
+      <p> <b>20. If y = 3, then y3(y3-y)=</p> </b>
+      <input type="radio" name="question20" id="mc" value="300" />300 <br />
+      <input type="radio" name="question20" id="mc" value="59" />59 <br />
+      <input type="radio" name="question20" id="mc" value="648" />648 <br />
+      <input type="radio" name="question20" id="mc" value="999" />999 <br />
+      <input type="radio" name="question20" id="mc" value="1099" />1099 <br />
+
+      <h3>GRAMMER PRACTICE QUESTION</h3>
+
+      <h4>Search for grammatical errors in the underlined sections of the following sentences and select the option that best
+      corrects them. If there is no error, choose option A.</h4>
+      
+      <p>21. Everyone in the bank-including the manager and the <u>tellers ,ran </u> to the door when the fire alarm rang.
+</p>
+      <input type="radio" name="question21" id="mc" value="tellers, ran" />tellers, ran <br />
+      <input type="radio" name="question21" id="mc" value="tellers: ran" />tellers: ran<br />
+      <input type="radio" name="question21" id="mc" value="tellers, had run" />tellers, had run <br />
+      <input type="radio" name="question21" id="mc" value="tellers-ran" />tellers-ran <br />
+      <input type="radio" name="question21" id="mc" value="tellers’ ran” " />tellers’ ran”
+<br />
+
+     <p>22. To no <u>ones surprise</u>, Joe didn’t have his homework ready.</p>
+      <input type="radio" name="question22" id="mc" value="no ones surprise" />no ones surprise<br />
+      <input type="radio" name="question22" id="mc" value="noones surprise" />noones surprise <br />
+      <input type="radio" name="question22" id="mc" value="no-ones surprise" />no-ones surprise<br />
+      <input type="radio" name="question22" id="mc" value="no ones’ surprise" />no ones’ surprise <br />
+      <input type="radio" name="question22" id="mc" value="no one’s surprise" />no one’s surprise <br />
+ 
+      <p>23.If he <u>would have read</u> “The White Birds,” he might have liked William Butler Yeats’ poetry.</p>
+      <input type="radio" name="question23" id="mc" value="would have read" />would have read<br />
+      <input type="radio" name="question23" id="mc" value="could have read" />could have read<br />
+      <input type="radio" name="question23" id="mc" value="would of read" />would of read<br />
+      <input type="radio" name="question23" id="mc" value="could of read" />could of read <br />
+      <input type="radio" name="question23" id="mc" value="had read" />had read <br />
+     
+    <p>24. After the hurricane, uprooted trees <u>were laying</u> all over the ground.</p>
+      <input type="radio" name="question24" id="mc" value="were laying" />were laying<br />
+      <input type="radio" name="question24" id="mc" value="lying" />lying <br />
+      <input type="radio" name="question24" id="mc" value="were lying" />were lying<br />
+      <input type="radio" name="question24" id="mc" value="were laid" />were laid <br />
+      <input type="radio" name="question24" id="mc" value="was laid" />was laid <br />
+
+     <p>25. Ralph Waldo Emerson (1803-1882), the great transcendentalist philosopher, wrote in his essay <u>“Self-Reliance”</u> of the
+    need for an individual to develop his capacities.</p>
+    <input type="radio" name="question25" id="mc" value="essay “Self-Reliance” " />essay “Self-Reliance”<br />
+    <input type="radio" name="question25" id="mc" value="say, “Self-Reliance” " />say, “Self-Reliance” <br />
+    <input type="radio" name="question25" id="mc" value="essay: Self-Reliance" />essay: Self-Reliance<br />
+    <input type="radio" name="question25" id="mc" value="essay, Self-Reliance" />essay, Self-Reliance <br />
+    <input type="radio" name="question25" id="mc" value="essay; “Self-Reliance” " />essay; “Self-Reliance” <br />
+
+
+    <p>26.The recently built children’s amusement park has been called “a boon to the community” by its supporters <u>and “an eyesore” by its harshest</u> critics.</p> 
+    <input type="radio" name="question26" id="mc" value="and “an eyesore” by its harshest" />and “an eyesore” by its harshest<br />
+    <input type="radio" name="question26" id="mc" value="and, “an eyesore,” by its harshest" />and, “an eyesore,” by its harshest <br />
+    <input type="radio" name="question26" id="mc" value="and, an eyesore; by its harshest" />and, an eyesore; by its harshest<br />
+    <input type="radio" name="question26" id="mc" value="and-an eyesore-by its’ harshest" />and-an eyesore-by its’ harshest <br />
+    <input type="radio" name="question26" id="mc" value="and-“an eyesore”-by its’ harshest" />and-“an eyesore”-by its’ harshest<br />
+
+    <p>27.I always have trouble remembering the meaning of these two common verbs, affect (to change” or “to influence”) and
+    effect (“to cause” or <u>“to accomplish).”</u></p>
+    <input type="radio" name="question27" id="mc" value="“to accomplish).”" />“to accomplish).”<br />
+    <input type="radio" name="question27" id="mc" value="“to accomplish”)." />“to accomplish”). <br />
+    <input type="radio" name="question27" id="mc" value="“to accomplish)." />“to accomplish).<br />
+    <input type="radio" name="question27" id="mc" value="To accomplish." />To accomplish. <br />
+    <input type="radio" name="question27" id="mc" value="“to accomplish.”)" />“to accomplish.”) <br />
+
+    <p>28.My class just finished <u>reading-“The Fall of the House of Usher”,</u> a short story by Edgar Allan Poe.</p>
+    <input type="radio" name="question28" id="mc" value="reading-“The Fall of the House of Usher”," />reading, The Fall of the House of Usher,<br />
+    <input type="radio" name="question28" id="mc" value="reading, The Fall of the House of Usher," />reading, The Fall of the House of Usher,
+<br/>
+    <input type="radio" name="question28" id="mc" value="reading “The Fall of the House of Usher,”
+" />reading “The Fall of the House of Usher,”
+<br />
+    <input type="radio" name="question28" id="mc" value="reading, “The Fall of the house of Usher,”
+" />reading, “The Fall of the house of Usher,”
+ <br />
+    <input type="radio" name="question28" id="mc" value="reading: The Fall of the House of Usher-" />reading: The Fall of the House of Usher- <br />
+
+    <p>29.After it was repaired it <u>ran perfect</u> again.</p>
+    <input type="radio" name="question29" id="mc" value="ran perfect" />ran perfect<br />
+    <input type="radio" name="question29" id="mc" value="ran perfectly" />ran perfectly
+ <br />
+    <input type="radio" name="question29" id="mc" value="could run perfect" />could run perfect<br />
+    <input type="radio" name="question29" id="mc" value="could of run perfect" />could of run perfect <br />
+    <input type="radio" name="question29" id="mc" value="would run perfectly" />would run perfectly<br />
+
+
+    <p>30.“Are <u>there two E’s in beetle,” asked Margo?</u></p>
+    <input type="radio" name="question30" id="mc" value="there two E’s in beetle,” asked Margo?" />there two E’s in beetle,” asked Margo?<br />
+    <input type="radio" name="question30" id="mc" value="their two E’s in beetle?” asked Margo." />their two E’s in beetle?” asked Margo. <br />
+    <input type="radio" name="question30" id="mc" value="their two E’s in beetle,” asked Margo." />their two E’s in beetle,” asked Margo.<br />
+    <input type="radio" name="question30" id="mc" value="there two E’s in beetle?” asked Margo." />there two E’s in beetle?” asked Margo. <br />
+    <input type="radio" name="question30" id="mc" value="there two E’s in beetle, asked Margo?" />there two E’s in beetle, asked Margo?<br />
+    
+      <br />
+      <br />
+      <input type="button" value="submit" id="button" onClick="clickGet()" />
+    </form>
+    <div id="after_submit">
+      <p id="messages"></p>
+      <p id="number_correct"></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
